@@ -16,21 +16,13 @@ def dream_home_calculator():
     #Portion of the cost needed for down payment
     portion_down_payment = 0.25 * total_cost
 
-    #investment and monthly salary calculations for savings
+    #total amount the user makes each month
     monthly_salary = annual_salary / 12
-    
 
+    #variable to hold the amount that the user saves from their salary each month
     monthly_savings = monthly_salary * portion_saved
 
-    #Things to consider
-    #1. I need to make math that calculates how many months it will take to save for dream house
-    #2. The math will include savings + Monthly salary
-    #3. I then need to figure out how to calculate how many months it will take to save enough for dream house.
-    #4. A good way of doing that would be take the cost of the down payment and then
-    #   divide by how much i save monthly
-
-    total_months = 0
-
+    #Loop that doesn't stop until current savings is equal or greater than the cost of the down payment
     while portion_down_payment >= current_savings:
         
         investment = current_savings*0.04 / 12
@@ -41,5 +33,5 @@ def dream_home_calculator():
 
     print(f"Number of Months: {total_months}")
 
-#test: Hey I just made a change
+
 dream_home_calculator()
